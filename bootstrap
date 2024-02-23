@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf ~/.config/nvim
+ln -sn $(pwd) ~/.config/nvim
