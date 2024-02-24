@@ -19,6 +19,29 @@ local packer_bootstrap = ensure_packer()
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- Remember last position in opened files
+  use 'farmergreg/vim-lastplace'
+
+  -- Undo tree
+  use 'mbbill/undotree'
+
+  -- Pretty status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  -- Treesitter
+  use 'nvim-treesitter/nvim-treesitter'
+
+  -- Highlighting references
+  use 'rrethy/vim-illuminate'
+
+  -- Fuzzy search
+  use { 'ibhagwan/fzf-lua',
+    -- optional for icon support
+    requires = { 'nvim-tree/nvim-web-devicons' }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
