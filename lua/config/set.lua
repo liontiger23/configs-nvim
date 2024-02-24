@@ -1,4 +1,5 @@
 vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.opt.encoding = "utf-8"
 vim.opt.fileencodings = "utf-8,ucs-bom,cp1251,koi8-r,default,latin1"
@@ -10,8 +11,13 @@ vim.opt.expandtab = true
 vim.opt.undofile = true -- Maintain undo history between sessions
 vim.opt.backup = false
 
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Keep some amount of lines between cursor and edges when scrolling
+vim.opt.scrolloff = 8
 
 -- Support cyrillic keyboard layout
 vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
