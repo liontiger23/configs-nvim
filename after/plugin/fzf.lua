@@ -1,5 +1,12 @@
 local fzf_lua = require('fzf-lua')
-fzf_lua.setup()
+fzf_lua.setup {
+    keymap = {
+        fzf = {
+            -- Open all matches as quickfix window
+            ["ctrl-q"] = "select-all+accept",
+        },
+    },
+}
 
 vim.keymap.set('n', '<leader>ff', fzf_lua.files, { desc = "Fuzzy search files" })
 vim.keymap.set('n', '<leader>fg', fzf_lua.live_grep, { desc = "Fuzzy grep" })
