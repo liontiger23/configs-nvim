@@ -43,8 +43,10 @@ require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
+  -- Colorscheme
   use { "catppuccin/nvim", as = "catppuccin" }
 
+  -- Bootstrap LSP package
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
@@ -62,6 +64,7 @@ require('packer').startup(function(use)
     }
   }
 
+  -- Haskell LSP integration
   use 'mrcjkb/haskell-tools.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
