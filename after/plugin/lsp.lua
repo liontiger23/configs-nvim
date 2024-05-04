@@ -19,6 +19,8 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
 end)
 
+require('lsp-status').register_progress()
+
 require('mason').setup({})
 require('mason-lspconfig').setup({})
 

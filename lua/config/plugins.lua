@@ -71,6 +71,9 @@ require('packer').startup(function(use)
     }
   }
 
+  -- Displaying LSP status and updates
+  use 'nvim-lua/lsp-status.nvim'
+
   -- Haskell LSP integration
   use 'mrcjkb/haskell-tools.nvim'
 

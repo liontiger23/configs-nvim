@@ -13,5 +13,6 @@ require('lualine').setup({
     --  custom_theme.inactive.c.bg = 'None'
     --  return custom_theme
     --end)
-  }
+  },
+  sections = { lualine_c = { "filename", "require'lsp-status'.status()" } }
 })
