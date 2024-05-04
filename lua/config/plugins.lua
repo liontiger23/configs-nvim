@@ -43,6 +43,13 @@ require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
+  -- Builtin pickers, sorters and previewers
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+    -- or                            , branch = '0.1.x',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
   -- Colorscheme
   use { "catppuccin/nvim", as = "catppuccin" }
 
