@@ -15,6 +15,11 @@ end
 
 require("nvim-tree").setup {
   on_attach = my_on_attach,
+
+  -- Focus currently opened file when toggled
+  update_focused_file = {
+    enable = true,
+  },
 }
 
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<cr>')
