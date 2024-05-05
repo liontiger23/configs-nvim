@@ -25,6 +25,9 @@ require('packer').startup(function(use)
   -- Automatic cd to project root
   use 'ahmedkhalf/project.nvim'
 
+  -- Better file tree viewer than builtin netrw
+  use 'nvim-tree/nvim-tree.lua'
+
   -- Undo tree
   use 'mbbill/undotree'
 

@@ -26,3 +26,8 @@ vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGH
 vim.opt.spelllang = "en_us,ru_ru"
 -- Show nine spell checking candidates at most
 vim.opt.spellsuggest = "best,9"
+
+-- Disable builtin file tree viewer
+-- (replaced with nvim-tree plugin instead)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
