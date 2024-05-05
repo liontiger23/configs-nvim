@@ -22,6 +22,9 @@ require('packer').startup(function(use)
   -- Remember last position in opened files
   use 'farmergreg/vim-lastplace'
 
+  -- Automatic cd to project root
+  use 'ahmedkhalf/project.nvim'
+
   -- Undo tree
   use 'mbbill/undotree'
 
