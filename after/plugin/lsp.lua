@@ -22,9 +22,14 @@ end)
 require('lsp-status').register_progress()
 
 require('mason').setup({})
-require('mason-lspconfig').setup({})
+require('mason-lspconfig').setup {
+  ensure_installed = {'lua_ls'},
+}
 
+------------
 -- Lua
+------------
+
 require('lspconfig').lua_ls.setup {
   settings = {
     Lua = {
