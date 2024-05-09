@@ -43,6 +43,9 @@ require('packer').startup(function(use)
   -- Highlighting references
   use 'rrethy/vim-illuminate'
 
+  -- Displaying color of corresponding RGB codes
+  use 'norcalli/nvim-colorizer.lua'
+
   -- Fuzzy search
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
