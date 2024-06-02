@@ -59,6 +59,9 @@ require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  -- Floating terminal support
+  use 'voldikss/vim-floaterm'
+
   -- Git blame with commit stack support
   use 'FabijanZulj/blame.nvim'
 
