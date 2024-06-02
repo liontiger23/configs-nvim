@@ -6,6 +6,9 @@ fzf_lua.setup {
             ["ctrl-q"] = "select-all+accept",
         },
     },
+    lsp = {
+      includeDeclaration = false
+    },
 }
 
 vim.keymap.set('n', '<leader>ff', fzf_lua.files, { desc = "Fuzzy search files" })
