@@ -31,3 +31,6 @@ vim.opt.spellsuggest = "best,9"
 -- (replaced with nvim-tree plugin instead)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Reduce update time to make editor more responsive
+vim.opt.updatetime = 100
