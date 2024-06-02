@@ -59,6 +59,9 @@ require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  -- Display unstaged changes in gutter
+  use 'airblade/vim-gitgutter'
+
   -- Colorscheme
   use { "catppuccin/nvim", as = "catppuccin" }
 
