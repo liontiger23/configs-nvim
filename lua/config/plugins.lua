@@ -59,6 +59,9 @@ require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  -- Git blame with commit stack support
+  use 'FabijanZulj/blame.nvim'
+
   -- Display unstaged changes in gutter
   use 'airblade/vim-gitgutter'
 
