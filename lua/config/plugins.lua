@@ -22,6 +22,9 @@ require('packer').startup(function(use)
   -- Remember last position in opened files
   use 'farmergreg/vim-lastplace'
 
+  -- Useful keymaps for common tasks like navigating to next/previous quickfix item with ]q/[q
+  use 'tpope/vim-unimpaired'
+
   -- Automatic cd to project root
   use 'ahmedkhalf/project.nvim'
 
