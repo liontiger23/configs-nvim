@@ -34,3 +34,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Reduce update time to make editor more responsive
 vim.opt.updatetime = 100
+
+-- Disable tab expansion in gitconfig files
+vim.cmd([[autocmd FileType gitconfig setlocal expandtab!]])
