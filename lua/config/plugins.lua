@@ -40,6 +40,12 @@ require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  -- Running snippets inside of neovim
+  use {
+    'michaelb/sniprun',
+    run = 'sh ./install.sh'
+  }
+
   -- Treesitter
   use 'nvim-treesitter/nvim-treesitter'
 
