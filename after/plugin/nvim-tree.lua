@@ -11,6 +11,7 @@ local function my_on_attach(bufnr)
   -- custom mappings
   vim.keymap.set('n', 'h',       api.node.navigate.parent,            opts('Parent Directory'))
   vim.keymap.set('n', 'l',       api.node.open.edit,                  opts('Open'))
+  vim.keymap.set('n', '?',       api.tree.toggle_help,                opts('Help'))
 end
 
 require("nvim-tree").setup {
