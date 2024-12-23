@@ -4,6 +4,9 @@ vim.opt.relativenumber = true
 vim.opt.encoding = "utf-8"
 vim.opt.fileencodings = "utf-8,ucs-bom,cp1251,koi8-r,default,latin1"
 
+-- Disable forced default indentation of 4 spaces in markdown files
+vim.g.markdown_recommended_style = 0
+
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
