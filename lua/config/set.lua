@@ -37,3 +37,10 @@ vim.opt.updatetime = 100
 
 -- Disable tab expansion in gitconfig and makefile files
 vim.cmd([[autocmd FileType gitconfig,makefile setlocal expandtab!]])
+
+-- Treat literate haskell files as markdown (but still run language server for lhaskell)
+vim.cmd([[autocmd FileType lhaskell set filetype=markdown]])
+
+-- Keep "bird-style" indentation when writing haskell code snippets
+-- and in markdown in general
+vim.cmd([[autocmd FileType lhaskell,markdown set formatoptions+=ro]])

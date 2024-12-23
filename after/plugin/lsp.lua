@@ -64,7 +64,7 @@ vim.g.haskell_tools = {
 local hls_augroup = vim.api.nvim_create_augroup('haskell-lsp', {clear = true})
 vim.api.nvim_create_autocmd('FileType', {
   group = hls_augroup,
-  pattern = {'haskell'},
+  pattern = {'haskell', 'lhaskell'},
   callback = function()
     ---
     -- Suggested keymaps from the quick setup section:
