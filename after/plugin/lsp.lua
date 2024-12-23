@@ -6,13 +6,16 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
   vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
   vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-  vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+  vim.keymap.set('n', 'gi', '<cmd>lua require("fzf-lua").lsp_implementations()<cr>', opts)
   vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
   vim.keymap.set('n', 'gr', '<cmd>lua require("fzf-lua").lsp_references()<cr>', opts)
   vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+  vim.keymap.set('n', '<leader>fd', '<cmd>lua require("fzf-lua").lsp_document_symbols()<cr>', opts)
+  vim.keymap.set('n', '<leader>fs', '<cmd>lua require("fzf-lua").lsp_live_workspace_symbols()<cr>', opts)
   vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
   vim.keymap.set({'n', 'x'}, '<leader>F', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
   vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+  vim.keymap.set('n', '<leader>cl', '<cmd>lua vim.lsp.codelens.run()<cr>', opts)
 
   vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
   vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
@@ -67,7 +70,7 @@ vim.api.nvim_create_autocmd('FileType', {
     local opts = { noremap = true, silent = true, buffer = bufnr, }
     -- haskell-language-server relies heavily on codeLenses,
     -- so auto-refresh (see advanced configuration) is enabled by default
-    vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, opts)
+    --vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, opts)
     -- Hoogle search for the type signature of the definition under the cursor
     vim.keymap.set('n', '<leader>hs', ht.hoogle.hoogle_signature, opts)
     -- Evaluate all code snippets
