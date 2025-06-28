@@ -18,6 +18,7 @@ fzf_lua.setup {
     }
   },
 }
+fzf_lua.register_ui_select()
 
 vim.keymap.set('n', '<leader>fr', fzf_lua.resume, { desc = "Resume previous fuzzy search" })
 vim.keymap.set('n', '<leader>ff', fzf_lua.files, { desc = "Fuzzy search files" })
