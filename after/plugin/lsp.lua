@@ -51,6 +51,12 @@ require('lspconfig').lua_ls.setup {
 require('lspconfig').pyright.setup({})
 
 ------------
+-- Go
+------------
+
+require('lspconfig').gopls.setup({})
+
+------------
 -- Haskell
 ------------
 
