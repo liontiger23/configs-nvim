@@ -104,6 +104,15 @@ require('packer').startup(function(use)
   -- Haskell LSP integration
   use 'mrcjkb/haskell-tools.nvim'
 
+  -- Scala LSP integration
+  use {
+    'scalameta/nvim-metals',
+    requires = {
+      {'mfussenegger/nvim-dap'},
+      {'nvim-lua/plenary.nvim'},
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
