@@ -101,6 +101,14 @@ require('packer').startup(function(use)
   -- Displaying LSP status and updates
   use 'nvim-lua/lsp-status.nvim'
 
+  use {
+    "rcarriga/nvim-dap-ui",
+    requires = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio"
+    }
+  }
+
   -- Haskell LSP integration
   use 'mrcjkb/haskell-tools.nvim'
 
