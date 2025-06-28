@@ -104,6 +104,33 @@ require('packer').startup(function(use)
   -- Haskell LSP integration
   use 'mrcjkb/haskell-tools.nvim'
 
+  use {
+    "yetone/avante.nvim",
+    requires = {
+      {'MunifTanjim/nui.nvim'},
+      {'MeanderingProgrammer/render-markdown.nvim'},
+      {'HakonHarnes/img-clip.nvim'},
+      {'stevearc/dressing.nvim'},
+      {'folke/snacks.nvim'},
+    },
+    branch = 'main',
+    run = "make",
+    cmd = { "AvanteChat", "AvanteEdit" },
+    config = function()
+      require("avante").setup({
+        provider = "ollama",  -- Default provider
+        providers = {
+          copilot = {},  -- Uses existing Copilot auth
+          ollama = {
+            endpoint = "http://localhost:11434",
+            model = "codellama:7b",  -- Good default for code
+            -- Alternative models: "llama3:70b", "mixtral"
+          }
+        }
+      })
+    end
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
