@@ -4,7 +4,12 @@ cmp_ai:setup({
   max_lines = 100,
   provider = 'Ollama',
   provider_options = {
-    model = 'codellama:7b-code',
+    model = 'qwen2.5-coder:1.5b-base-q8_0',
+    prompt = function(lines_before, lines_after)
+      -- You may include filetype and/or other project-wise context in this string as well.
+      -- Consult model documentation in case there are special tokens for this.
+      return "<|fim_prefix|>" .. lines_before .. "<|fim_suffix|>" .. lines_after .. "<|fim_middle|>"
+    end,
     auto_unload = false, -- Set to true to automatically unload the model when
                          -- exiting nvim.
   },
