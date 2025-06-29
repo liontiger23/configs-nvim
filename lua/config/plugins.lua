@@ -115,20 +115,6 @@ require('packer').startup(function(use)
     },
     branch = 'main',
     run = "make",
-    cmd = { "AvanteChat", "AvanteEdit" },
-    config = function()
-      require("avante").setup({
-        provider = "ollama",  -- Default provider
-        providers = {
-          copilot = {},  -- Uses existing Copilot auth
-          ollama = {
-            endpoint = "http://localhost:11434",
-            model = "codellama:7b",  -- Good default for code
-            -- Alternative models: "llama3:70b", "mixtral"
-          }
-        }
-      })
-    end
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
