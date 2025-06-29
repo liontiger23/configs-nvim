@@ -104,6 +104,15 @@ require('packer').startup(function(use)
   -- Haskell LSP integration
   use 'mrcjkb/haskell-tools.nvim'
 
+  -- LLM autocompletion
+  use {
+    'tzachar/cmp-ai',
+    requires = {
+      {'nvim-lua/plenary.nvim'},
+      {'hrsh7th/nvim-cmp'},
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
