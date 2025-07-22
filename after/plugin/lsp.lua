@@ -57,6 +57,17 @@ require('lspconfig').pyright.setup({})
 require('lspconfig').gopls.setup({})
 
 ------------
+-- C/C++
+------------
+
+require('lspconfig').clangd.setup({
+  cmd = function(dispatchers, config)
+    local cmd = { 'clangd', '--compile-commands-dir=' .. config.root_dir }
+    return vim.lsp.rpc.start(cmd, dispatchers)
+  end,
+})
+
+------------
 -- Haskell
 ------------
 
