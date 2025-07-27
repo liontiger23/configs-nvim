@@ -62,7 +62,11 @@ require('lspconfig').gopls.setup({})
 
 require('lspconfig').clangd.setup({
   cmd = function(dispatchers, config)
-    local cmd = { 'clangd', '--compile-commands-dir=' .. config.root_dir }
+    local project_dir = (config or {}).root_dir
+    local cmd = { 'clangd' }
+    if project_dir then
+      table.insert(cmd, '--compile-commands-dir=' .. project_dir)
+    end
     return vim.lsp.rpc.start(cmd, dispatchers)
   end,
 })
