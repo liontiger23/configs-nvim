@@ -4,8 +4,8 @@ lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr}
 
   vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-  vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-  vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+  vim.keymap.set('n', 'gd', '<cmd>lua require("fzf-lua").lsp_definitions()<cr>', opts)
+  vim.keymap.set('n', 'gD', '<cmd>lua require("fzf-lua").lsp_declarations()<cr>', opts)
   vim.keymap.set('n', 'gi', '<cmd>lua require("fzf-lua").lsp_implementations()<cr>', opts)
   vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
   vim.keymap.set('n', 'gr', '<cmd>lua require("fzf-lua").lsp_references()<cr>', opts)
