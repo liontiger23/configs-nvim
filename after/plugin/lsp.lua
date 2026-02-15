@@ -33,7 +33,7 @@ require('mason-lspconfig').setup {
 -- Lua
 ------------
 
-require('lspconfig').lua_ls.setup {
+vim.lsp.config('lua_ls', {
   settings = {
     Lua = {
       diagnostics = {
@@ -42,25 +42,25 @@ require('lspconfig').lua_ls.setup {
       },
     },
   },
-}
+})
 
 ------------
 -- Python
 ------------
 
-require('lspconfig').pyright.setup({})
+vim.lsp.enable('pyright')
 
 ------------
 -- Go
 ------------
 
-require('lspconfig').gopls.setup({})
+vim.lsp.enable('gopls')
 
 ------------
 -- C/C++
 ------------
 
-require('lspconfig').clangd.setup({
+vim.lsp.config('clangd', {
   cmd = function(dispatchers, config)
     local project_dir = (config or {}).root_dir
     local cmd = { 'clangd' }
