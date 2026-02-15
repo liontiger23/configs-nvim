@@ -20,7 +20,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep some amount of lines between cursor and edges when scrolling
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 2
 
 -- Support cyrillic keyboard layout
 vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
