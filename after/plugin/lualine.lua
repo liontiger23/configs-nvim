@@ -1,6 +1,7 @@
+local catppuccin = require 'catppuccin.utils.lualine' 'mocha'
 require('lualine').setup({
   options = {
-    theme = 'catppuccin'
+    theme = catppuccin
 
     -- Enabling transparency in default theme:
     -- 
