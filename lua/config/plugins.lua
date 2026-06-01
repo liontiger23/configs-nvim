@@ -47,7 +47,12 @@ require('packer').startup(function(use)
   }
 
   -- Treesitter
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
+    lazy = false,
+    build = ':TSUpdate'
+  }
 
   -- Highlighting references
   use 'rrethy/vim-illuminate'
