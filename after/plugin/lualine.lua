@@ -1,4 +1,4 @@
-local catppuccin = require 'catppuccin.utils.lualine' 'mocha'
+local catppuccin = require 'catppuccin.utils.lualine' 'latte'
 require('lualine').setup({
   options = {
     theme = catppuccin
