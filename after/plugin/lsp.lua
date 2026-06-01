@@ -57,6 +57,12 @@ vim.lsp.enable('pyright')
 vim.lsp.enable('gopls')
 
 ------------
+-- Yaml
+------------
+
+vim.lsp.enable('yamlls')
+
+------------
 -- C/C++
 ------------
 
