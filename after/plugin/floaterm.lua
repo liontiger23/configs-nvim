@@ -1,1 +1,7 @@
-vim.keymap.set('n', '<leader>lg', '<cmd>FloatermNew --height=0.98 --width=0.98 --disposable lazygit<cr>', { desc = "Open lazygit" })
+vim.keymap.set('n', '<leader>lg', '<cmd>FloatermNew --height=0.98 --width=0.98 --disposable lazygit<cr>', { desc = "Open floaterm lazygit" })
+vim.keymap.set('n', '<leader>lt', '<cmd>FloatermNew --height=0.98 --width=0.98<cr>', { desc = "Open floaterm terminal" })
+vim.keymap.set('n', '<leader>lf', '<cmd>FloatermNew --height=0.98 --width=0.98 --opener=edit vifm<cr>', { desc = "Open floaterm vifm" })
+vim.keymap.set('n', '<C-t>', '<cmd>FloatermToggle<cr>', { desc = "Toggle current floaterm window" })
+vim.keymap.set('t', '<C-t>', '<C-/><C-n><cmd>FloatermToggle<cr>', { desc = "Toggle current floaterm window" })
+vim.keymap.set('n', '<leader>ln', '<cmd>FloatermNext<cr>', { desc = "Next floaterm window" })
+vim.keymap.set('n', '<leader>ln', '<cmd>FloatermPrev<cr>', { desc = "Previous floaterm window" })
