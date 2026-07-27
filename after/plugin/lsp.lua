@@ -66,16 +66,7 @@ vim.lsp.enable('yamlls')
 -- C/C++
 ------------
 
-vim.lsp.config('clangd', {
-  cmd = function(dispatchers, config)
-    local project_dir = (config or {}).root_dir
-    local cmd = { 'clangd' }
-    if project_dir then
-      table.insert(cmd, '--compile-commands-dir=' .. project_dir)
-    end
-    return vim.lsp.rpc.start(cmd, dispatchers)
-  end,
-})
+vim.lsp.enable('clangd')
 
 ------------
 -- Haskell
